@@ -22,8 +22,8 @@ namespace Asp.netCoreMVCCRUD.Models
         [DisplayName("Emp. Code")]
         [RegularExpression(@"[a-zA-Z0-9""'\s-]*$"), StringLength(5)]
         public string EmpCode { get; set; }
-        [Column("Position")]
-        [RegularExpression(@"^[A-Z]+[a-z]*$"), Required(ErrorMessage ="This field is required."), StringLength(30)]
+        [Column("Position")] 
+        [RegularExpression(@"^[A-Z]+[a-z""]*$"), Required(ErrorMessage ="This field is required."), StringLength(30)]
         public string Position { get; set; }
         [Column("OfficeLocation")]
         [DisplayName("Office Location")]
@@ -33,7 +33,7 @@ namespace Asp.netCoreMVCCRUD.Models
         [DisplayFormat(DataFormatString ="{0:C}")]
         public decimal Salary { get; set; }
 
-        [Column("RecruitmentDate")]
+        [Column("RecruitmentDate"), DisplayFormat(DataFormatString = "{0:dd-MM-yyyy}", ApplyFormatInEditMode = true)]
         public DateTime RecruitmentDate { get; set; }
     }
 }
