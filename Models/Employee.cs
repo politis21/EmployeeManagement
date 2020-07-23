@@ -33,7 +33,7 @@ namespace Asp.netCoreMVCCRUD.Models
         [DisplayFormat(DataFormatString ="{0:C}")]
         public decimal Salary { get; set; }
 
-        //[Column("RecruitmentDate")]
-        //public DateTime RecruitmentDate  { get; set; }
+        [Column("RecruitmentDate")]
+        public DateTime RecruitmentDate { get; set; }
     }
 }
